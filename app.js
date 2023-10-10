@@ -4,7 +4,7 @@ const openAI = require('openai');
 const bodyParser = require('body-parser');
 //const morgan = require('morgan');
 const path = require('path');
-const myRouter = require(__dirname + '/routes/myRoutes');
+const myRouter = require('./routes/myRoutes');
 
 // Importamos dotenv para acceder a variables de entorno
 require('dotenv').config();
@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
-app.set('views', __dirname + '/views');
+app.set('views', './views');
 
 app.use('/', myRouter);
 module.exports = app

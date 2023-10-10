@@ -8,7 +8,7 @@ dotenv.config({ path: "./config.env" });
 //Conexión al cloud de Mongodb Atlas
 mongoose
     .connect(
-        `mongodb+srv://tbbecchi:contraseña@clusterchatgpt.lwicrq6.mongodb.net/test`,
+        `mongodb+srv://tbbecchi:contraseñathiago@clusterchatgpt.5vnad4d.mongodb.net/test`,
         { useNewUrlParser: true, useUnifiedTopology: true }
     )
     .then((con) => {
